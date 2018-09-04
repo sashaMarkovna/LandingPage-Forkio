@@ -36,12 +36,9 @@
   &__itemList {
     @include flex-row;
     width: 100%;
-    //max-width: 720px;
     justify-content: flex-start;
     flex-wrap: nowrap;
     text-align: center;
-    //position: relative;
-    //overflow: hidden;
     }
 
   &__item {

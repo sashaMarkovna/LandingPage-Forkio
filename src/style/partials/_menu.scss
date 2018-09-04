@@ -35,14 +35,13 @@
 
   &--dropdown {
     @include flex-col;
+    @include size(100%, 64.02vh);
     flex-wrap: nowrap;
-    width: 100%;
     position: absolute;
     left: 0;
     top: 100%;
     z-index: 1;
     visibility: hidden;
-    height: 64.02vh;
 
     .menu__item {
       @include flex-row;

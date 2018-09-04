@@ -23,9 +23,7 @@
 @media screen and (min-width: 993px) and (max-width: 1128px) {
   //==========================================================FOLLOW_UP-SECTION====//
   .followUp .callbackForm {
-    &__input {
-      width: 30%;
-      min-width: 210px; }
+    &__input { @include width(30%, 210px); }
   }
 }
 

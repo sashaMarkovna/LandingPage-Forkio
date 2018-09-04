@@ -8,8 +8,7 @@
   &__item {
     @include flex-col;
     @include marginLR(11px, 11px);
-    min-width: 294px;
-    width: 30%;
+    @include width(30%, 294px);
     max-width: 330px;
     padding-bottom: 98px; }
 

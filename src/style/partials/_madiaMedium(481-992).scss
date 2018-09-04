@@ -62,9 +62,7 @@
     max-width: 91.14%;
     margin-bottom: 72px; }
   //==========================================================REVIEW-SECTION====//
-  .reviews .reviewsList__item {
-    min-width: 206.4px;
-    width: 40%; }
+  .reviews .reviewsList__item { @include width(40%, 206.4px); }
   .reviews__separation { min-width: 100%; }
   //==========================================================PURCHASE-SECTION====//
   .purchase .purchaseOptions { width: 90%; }
