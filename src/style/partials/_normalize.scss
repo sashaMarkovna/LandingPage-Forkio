@@ -1,0 +1,29 @@
+@import "var";
+@import "mixin";
+* {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover { text-decoration: none; }
+}
+
+ul { list-style: none; }
+
+
+footer,
+section {
+  display:flex;
+  justify-content: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  min-width: 320px; }
+
+.icon {
+  background-image: url("../img/css_sprites.png");
+  display: block; }

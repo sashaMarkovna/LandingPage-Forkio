@@ -1,0 +1,73 @@
+@import "var";
+
+@mixin flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin font($color, $size, $weight) {
+  color: $color;
+  font-size: $size+px;
+  font-weight: $weight;
+}
+
+@mixin fontSW($size, $weight: 400) {
+  font-size: $size+px;
+  font-weight: $weight;
+}
+
+@mixin sprite($width, $height, $x, $y) {
+  width: $width+px;
+  height: $height+px;
+  background-position: $x+px $y+px;
+}
+
+@mixin width($width, $minWidth) {
+  width: $width;
+  min-width: $minWidth;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin marginTB ($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin marginLR ($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin paddingTB ($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin paddingLR ($left, $right) {
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin transform ($transform) {
+  -webkit-transform: scale($transform);
+  -ms-transform: scale($transform);
+  transform: scale($transform);
+}
+
+@mixin headerTitle ($first, $second) {
+  .header__titleMainRow { font-size: $first+px; }
+  .header__titleSecondRow { font-size: $second+px; }
+}
