@@ -26,9 +26,7 @@
   //==========================================================PURCHASE-SECTION====//
   .purchase { padding-bottom: 37px;}
   .purchase .purchase__footnote { padding-top: 47px; }
-  .purchase .focused {
-    margin-top: 32px;
-    margin-bottom: 32px; }
+  .purchase .focused { @include marginTB(57px, 57px); }
   //==========================================================FOLLOW_UP-SECTION====//
   .followUp__callbackTitle {display: none; }
   .followUp__subscribeTitle { display: flex; }
@@ -42,24 +40,25 @@
     &__button { min-width: 100px; }
   }
   //==========================================================FOOTER-SECTION====//
-  .footer {
-    &__content {
-      flex-direction: column;
-      width: calc(100% - 10px); }
-    .logoBlock,
-    .navigation,
-    .contacts,
-    .info {
-      margin-bottom: 30px;
-      width: calc(100% - 10px);
-      margin-left: 10px; }
-    .info__title { margin-left: 0; }
-    .logoBlock__description { width: 252px; }
-    .contacts__address {
+  .footer__content {
+    flex-direction: column;
+    width: calc(100% - 10px); }
+
+  .footer .logoBlock,
+  .footer .navigation,
+  .footer .contacts,
+  .footer .info {
+    margin-bottom: 30px;
+    width: calc(100% - 10px);
+    margin-left: 10px; }
+
+  .footer .info__title { margin-left: 0; }
+  .footer .logoBlock__description { width: 252px; }
+  .footer .contacts__address {
       max-width: 247px;
       line-height: 23px; }
-  }
 }
+
 
 
 @media screen and (max-width: 462px) {
