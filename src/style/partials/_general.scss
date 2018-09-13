@@ -11,18 +11,20 @@
   &__title {
     @include flex-col;
     @include width(90%, 300px);
-    @include marginLR(auto, auto);}
+    @include marginLR(auto, auto); }
 
-  &__titleMainRow,
-  &__titleSecondRow,
-  &__titleThirdRow {
+  .header__title p:first-child,
+  .header__title p:nth-child(2),
+  .header__title p:last-child {
     padding-top: 10.20px;
     font-family: $montserrat; }
 
-  &__titleMainRow { @include font($white, 82, 700); }
-  &__titleSecondRow { @include font($violet, 30, 400); }
-  &__titleThirdRow { @include font($lightGrey, 16, 400); }
+  .header__title p:first-child { @include font($white, 82, 700); }
+  .header__title p:nth-child(2) { @include font($violet, 30, 400); }
+  .header__title p:last-child { @include font($lightGrey, 16, 400); }
 }
+
+
 
 //==================DOWNLOAD-SECTION================//
 .downloadBlock {
@@ -73,7 +75,8 @@
   &__title {
     @include font($violet, 48, 700);
     font-family: $montserrat;
-    margin-bottom: 41px; }
+    margin-bottom: 41px;
+    margin-right: 7%; }
 
   &__codeBlock { overflow: hidden; }
 

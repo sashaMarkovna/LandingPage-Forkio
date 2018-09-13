@@ -68,6 +68,6 @@
 }
 
 @mixin headerTitle ($first, $second) {
-  .header__titleMainRow { font-size: $first+px; }
-  .header__titleSecondRow { font-size: $second+px; }
+  .header__title p:first-child { font-size: $first+px; }
+  .header__title p:nth-child(2) { font-size: $second+px; }
 }
