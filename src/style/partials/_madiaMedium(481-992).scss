@@ -1,6 +1,5 @@
 
 @media screen and (max-width: 992px) {
-  //==========================================================HEADER-SECTION====//
 
   //==========================================================OVERVIEW-SECTION====//
   .overview {
@@ -23,12 +22,18 @@
   //==========================================================PURCHASE-SECTION====//
   .purchase__title { margin-bottom: 47px; }
   .purchase .focused { @include marginTB(60px, 60px); }
-  .purchase .purchaseOptions { flex-wrap: wrap; }
+  .purchase .purchaseOptions {
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap; }
   .purchase .purchaseOptions__option {
     width: 257px;
     margin: 7px; }
   //==========================================================FOLLOW_UP-SECTION====//
-  .followUp__content { flex-direction: column; }
+  .followUp__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
 }
 
 
@@ -40,7 +45,10 @@
 
 @media screen and (min-width: 481px) and (max-width: 992px) {
   //==========================================================HEADER-SECTION====//
-  @include headerTitle(72, 24);
+  .header__title p:first-child {
+    font-size: 72px !important;
+    margin-top: 30px;}
+  .header__title p:nth-child(2) { font-size: 24px !important; }
   .header .inlineBar { padding-bottom: 73px; }
   .header .menu--inline {
     position: absolute;

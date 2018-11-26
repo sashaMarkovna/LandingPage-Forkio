@@ -7,11 +7,15 @@
 
   &__row {
     @include flex-row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
 
   &__menuBlock {
     @include flex-row;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
 
   &__verticalSeparation {
@@ -23,6 +27,7 @@
 //======================LOGO===================//
 .logo {
   @include flex-row;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 
   &__icon { margin-right: 17px; }
@@ -73,6 +78,7 @@
 .callbackForm,
 .subscribeForm {
   @include flex-row;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
 
 .callbackForm__input,
@@ -102,6 +108,8 @@
 .info {
   @include flex-col;
   text-align: left;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start; }
 
 

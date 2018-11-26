@@ -85,7 +85,7 @@ gulp.task('style:build', function () {
    gulp.src(path.src.style)
        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
        .pipe(sass())
-       .pipe(preFixer()) //Префиксы для всех браузеров
+       // .pipe(preFixer()) //Префиксы для всех браузеров
        .pipe(sourceMaps.init())
        .pipe(cssMin('main.css.min'))
        .pipe(sourceMaps.write())

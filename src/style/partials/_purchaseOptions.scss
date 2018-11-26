@@ -1,8 +1,12 @@
 .purchaseOptions {
   @include flex-row;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-align: initial;
+  -ms-flex-align: initial;
   align-items: initial;
   width: 100%;
+
 
   &__option {
     @include flex-col;

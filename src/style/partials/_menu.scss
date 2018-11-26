@@ -5,6 +5,7 @@
 
   &--inline {
     @include flex-row;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
 
     .menu__item {
@@ -21,7 +22,10 @@
 
   &--multiline {
     @include flex-col;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+
     .menu__itemLink {
       @include font($violet, 15, 400);
       line-height: 23px;
@@ -36,6 +40,7 @@
   &--dropdown {
     @include flex-col;
     @include size(100%, 64.02vh);
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     position: absolute;
     left: 0;
@@ -46,6 +51,8 @@
     .menu__item {
       @include flex-row;
       @include size(100%,-webkit-fill-available);
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: flex-start;
       background-color: #333333;
       border-bottom: 1px solid #858585;

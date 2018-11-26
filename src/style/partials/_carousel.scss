@@ -1,6 +1,7 @@
 .carousel {
   @include flex-row;
   @include marginTB(34px, 80px);
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
   position: relative;
@@ -36,10 +37,12 @@
   &__itemList {
     @include flex-row;
     width: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    text-align: center;
-    }
+    text-align: center; }
 
   &__item {
     @include flex-col;
@@ -55,6 +58,7 @@
     @include size(85px, 85px);
     border-radius: 50px;
     opacity: 0.8;
+    -webkit-box-shadow: 0 0 25px rgba(0, 5, 5, 0.3);
     box-shadow: 0 0 25px rgba(0, 5, 5, 0.3);
     margin: 23px; }
 
