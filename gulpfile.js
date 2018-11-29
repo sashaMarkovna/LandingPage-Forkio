@@ -35,7 +35,7 @@ let path = {
         js:    'src/js/main.js',
         style: 'src/style/main.scss',
         img: 'src/img/*.*',
-        php: 'src/php/mail.php'
+        php: 'src/php/**/*.php'
     },
     //изменения
     watch: {

@@ -17,7 +17,8 @@
   .header__title p:nth-child(2),
   .header__title p:last-child {
     padding-top: 10.20px;
-    font-family: $montserrat; }
+    font-family: $montserrat;
+    width: inherit; }
 
   .header__title p:first-child { @include font($white, 82, 700); }
   .header__title p:nth-child(2) { @include font($violet, 30, 400); }
@@ -49,6 +50,9 @@
     @include flex-col;
     text-align: center; }
 
+  &__title,
+  &__description { width: inherit; }
+
   &__title {
     @include font($darkViolet, 54, 700);
     font-family: 'Montserrat', sans-serif;
@@ -67,25 +71,35 @@
 
 //==================OVERVIEW-SECTION================//
 .overview {
-  @include flex-row;
-  @include paddingLR(6.5%, 0);
-  @include paddingTB(210px, 69px);
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   background-color: $backgroundGrey;
-  position: relative;
-  text-align: left;
+
+  &__block {
+    @include flex-row;
+    padding-bottom: 69px;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    text-align: left;
+    align-items: flex-start;
+
+  }
 
   &__title {
     @include font($violet, 48, 700);
     font-family: $montserrat;
     margin-bottom: 41px;
-    margin-right: 7%; }
+    &--top {
+      display: none;
+      width: 100%; }
+  }
 
-  &__codeBlock { overflow: hidden; }
+  &__codeBlock {
+    overflow: hidden;
+    position: relative;
+    margin-top: -15px;}
 
   &__codeImage {
     @include sprite(678, 475, -20, -20);
@@ -139,7 +153,8 @@
 
   &__title {
     @include font($white, 48, 700);
-    margin-bottom: 115px; }
+    margin-bottom: 115px;
+    width: 100%; }
 
   &__footnote {
     @include font(#a291a5, 14, 400);
@@ -151,7 +166,7 @@
 
 //==================FOLLOW-UP--SECTION================//
 .followUp {
-  @include flex-row;
+  @include flex-col;
   @include paddingTB(26px, 32px);
   background-color: #f4f4f4;
   font-family: $montserrat;
@@ -170,12 +185,13 @@
 
   &__subscribeTitle {
     @include font(#323232, 28, 700);
-    display: none; }
+    display: none;
+    width: 100%; }
 }
 
 //==================FOOTER--SECTION================//
 .footer {
-  @include flex-row;
+  @include flex-col;
   padding-top: 75px;
   font-family: $montserrat;
 
@@ -197,6 +213,23 @@
   .info { width: 26%; }
 }
 
+//THANK_YOU
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__title {
+    font-size: 20px;
+    color: black;
+  }
+  &__subtitle {
+    font-size: 16px;
+    color: black;
+  }
+}
 
 
 

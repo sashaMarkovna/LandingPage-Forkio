@@ -7,13 +7,15 @@
   font-family: $montserrat;
   position: relative;
   max-width: 501px;
+  width: 100%;
 
   &__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 34px;
-    min-height: 110px }
+    min-height: 110px;
+    width: 100%; }
 
   &__itemTextArea {
     @include font($lightGrey, 14, 400);
@@ -21,11 +23,17 @@
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    margin-left: 23px; }
+    margin-left: 23px;
+    width: 100%;}
 
   &__itemTitle {
     @include font($darkGrey, 16, 400);
-    margin-bottom: 5px;}
+    margin-bottom: 5px;
+    width: 100%; }
+
+  &__itemDescription {
+    width: 100%;
+  }
 
   .icon { min-width: 111px; }
 

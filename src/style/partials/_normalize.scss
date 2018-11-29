@@ -4,6 +4,9 @@
   padding: 0;
   margin: 0; }
 
+//body::-webkit-scrollbar { display: none;  }
+body { overflow-x: hidden; }
+
 a {
   text-decoration: none;
   color: black;
@@ -15,14 +18,16 @@ ul { list-style: none; }
 
 footer,
 section {
-  display:flex;
-  justify-content: center;
+  @include flex-col;
 }
 
 .container {
-  width: 95%;
+  width: 96%;
   max-width: 1200px;
-  min-width: 320px; }
+  margin: 0 auto;
+  padding: 0 2%;
+  -ms-overflow-style: none;
+}
 
 .icon {
   background-image: url("../img/css_sprites.png");

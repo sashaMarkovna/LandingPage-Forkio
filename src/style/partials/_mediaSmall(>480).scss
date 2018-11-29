@@ -85,10 +85,8 @@
 
 @media screen and (max-width: 408px) {
   //==========================================================HEADER-SECTION====//
-  .header .inlineBar__row {
-    @include transform(0.8);
-    @include marginLR(-70px, -70px);
-    width: 120%; }
+  .header .inlineBar__row { @include transform(0.8); }
+  .header .button--buy { display: none; }
   //==========================================================EDITOR-SECTION====//
   .editor__title { font-size: 33px; }
 }

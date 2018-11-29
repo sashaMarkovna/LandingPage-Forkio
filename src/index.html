@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1.0">
     <title>Forkio</title>
 
@@ -16,17 +17,18 @@
 <body>
 
     <header class="header">
-
         <div class="inlineBar">
-            <div class="inlineBar__row container">
-                //= template/logo.html
-                <div class="inlineBar__menuBlock">
-                    <ul class="menu menu--inline" id="menu">
-                        //= template/menuItems.html
-                    </ul>
-                    <a class="button button--buy" href="#">Buy Now</a>
-                    <div class="inlineBar__verticalSeparation"></div>
-                    //= template/menuWrapper.html
+            <div class="container">
+                <div class="inlineBar__row">
+                    //= template/logo.html
+                    <div class="inlineBar__menuBlock">
+                        <ul class="menu menu--inline" id="menu">
+                            //= template/menuItems.html
+                        </ul>
+                        <a class="button button--buy" href="#">Buy Now</a>
+                        <div class="inlineBar__verticalSeparation"></div>
+                        //= template/menuWrapper.html
+                    </div>
                 </div>
             </div>
             <ul class="menu menu--dropdown" id="dropdownMenu">
@@ -34,7 +36,7 @@
             </ul>
         </div>
 
-        <div class="header__title">
+        <div class="header__title container">
             <p class="header__titleMainRow">Fork App</p>
             <p class="header__titleSecondRow">A real gamechanger in the world of web development</p>
             <p class="header__titleThirdRow">v. 2.8 For Mac and Windows</p>
@@ -55,10 +57,15 @@
     </section>
 
     <section class="overview " id="overview">
-        //= template/overviewList.html
-        <div class="overview__codeBlock">
-        <p class="overview__title">&lt Here is what you get &gt</p>
-            <div class="overview__codeImage"></div>
+        <div class="container">
+            <div class="overview__block">
+                <h2 class="overview__title overview__title--top">&lt Here is what you get &gt</h2>
+                //= template/overviewList.html
+                <div class="overview__codeBlock">
+                    <h2 class="overview__title overview__title--middle">&lt Here is what you get &gt</h2>
+                    <div class="overview__codeImage"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -76,30 +83,34 @@
     </section>
 
     <section class="purchase" id="purchase">
-        <p class="purchase__title">Fork Subscription Pricing</p>
-        <div class="purchase__content container">
-            //= template/purchaseOptions.html
-            <p class="purchase__footnote">Duis lobortis arcu sed arcu tincidunt feugiat.
-                Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh.
-                Donec eget elit eu libero tincidunt consequat nec elementum orci.
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
+        <div class="container">
+            <p class="purchase__title">Fork Subscription Pricing</p>
+            <div class="purchase__content container">
+                //= template/purchaseOptions.html
+                <p class="purchase__footnote">Duis lobortis arcu sed arcu tincidunt feugiat.
+                    Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh.
+                    Donec eget elit eu libero tincidunt consequat nec elementum orci.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </p>
+            </div>
         </div>
     </section>
 
     <section class="followUp">
-        <div class="followUp__content container">
-            <p class="followUp__callbackTitle">Order callbak</p>
-            <p class="followUp__subscribeTitle">Subscribe To Stay In Touch</p>
-            <form class="callbackForm" id="callbackForm">
-                <input class="callbackForm__input callbackForm__inputName" type="text" placeholder="Your name" name="name" required>
-                <input class="callbackForm__input callbackForm__inputPhone" type="text" placeholder="Phone" name="phone" required>
-                <button class="callbackForm__button button button--call" type="submit">CALL ME!</button>
-            </form>
-            <form class="subscribeForm" id="subscribeForm">
-                <input class="subscribeForm__input" type="email" placeholder="Email..." name="email" required>
-                <button class="subscribeForm__button button button--subscribe">SUBSCRIBE</button>
-            </form>
+        <div class="container">
+            <div class="followUp__content">
+                <p class="followUp__callbackTitle">Order callbak</p>
+                <p class="followUp__subscribeTitle">Subscribe To Stay In Touch</p>
+                <form action="php/mail.php" method="POST" class="callbackForm" id="callbackForm">
+                    <input class="callbackForm__input callbackForm__inputName" type="text" placeholder="Your name" name="name" required>
+                    <input class="callbackForm__input callbackForm__inputPhone" type="text" placeholder="Phone" name="phone" required>
+                    <button class="callbackForm__button button button--call" type="submit">CALL ME!</button>
+                </form>
+                <form action="php/mail.php" method="POST" class="subscribeForm" id="subscribeForm">
+                    <input class="subscribeForm__input" type="email" placeholder="Email..." name="email" required>
+                    <button class="subscribeForm__button button button--subscribe">SUBSCRIBE</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -110,33 +121,6 @@
             window.setTimeout('location.reload()', 500);
         });
     </script>
-
-    <script>
-         $(document).ready(function () {
-
-            $("#callbackForm").submit(function () {
-                $.ajax({
-                    type: "POST",
-                    url: "/php/mail.php",
-                    data: $(this).serialize()
-                }).done(function () {
-                    alert("Thank you! We'll contact you soon!");
-                });
-            });
-
-            $("#subscribeForm").submit(function () {
-                $.ajax({
-                    type: "POST",
-                    url: "/php/mail.php",
-                    data: $(this).serialize()
-                }).done(function () {
-                    alert("Thank you! We'll contact you soon!");
-                });
-                return false;
-            });
-         });
-    </script>
-
 
     <script src="js/main.min.js"></script>
 </body>

@@ -7,7 +7,7 @@
   position: relative;
 
   &__showBlock {
-    width: 77.5%;
+    width: 100%;
     max-width: 720px;
     position: relative;
     overflow: hidden;
@@ -42,7 +42,8 @@
     justify-content: flex-start;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    text-align: center; }
+    text-align: center;
+    }
 
   &__item {
     @include flex-col;
@@ -52,7 +53,9 @@
 
   &__title {
     @include flex-row;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    width: 100%;
+    box-sizing: border-box; }
 
   &__img {
     @include size(85px, 85px);

@@ -15,10 +15,11 @@
     position: relative;
     background-color: hsla(0,0%,100%,.11);
     text-align: center;
-    padding-bottom: 120px;
     cursor: pointer;
     margin: 7px;
-    margin-bottom: 92px; }
+    height: 505px;
+    margin-bottom: 92px;
+    justify-content: flex-start !important; }
 
   &__optionName {
     @include size(100%, 97px);
